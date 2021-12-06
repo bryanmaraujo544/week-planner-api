@@ -7,7 +7,7 @@ function jwtAuth (req, res, next) {
         return res.json({ message: 'there is no token', auth: false });
     }
 
-    const token = authorization?.split(' ')[1];
+    const token = authorization.split(' ')[1];
 
     try {
         const tokenDecoded = jwt.verify(token, process.env.JWT_SECRET);
