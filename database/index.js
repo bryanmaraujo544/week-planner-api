@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 
 const db = mysql.createPool({
-    host: 'locahost',
+    host: 'localhost',
     user: 'root',
     password: 'root',
     database: 'week_planner'
