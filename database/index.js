@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 const db = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'week_planner'
+    host: 'us-cdbr-east-04.cleardb.com',
+    user: 'b14f3403ab38f1',
+    password: 'aeeb33e3',
+    database: 'heroku_0884759a7091ce7'
 });
 
 exports.query = async (query, values = []) => {
