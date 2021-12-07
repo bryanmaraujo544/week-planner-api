@@ -21,7 +21,7 @@ class AuthController {
         }
 
         const token = await createToken({ id: user.id, name: user.name });
-        res.json({ message: 'user logged-in', token })
+        res.json({ message: 'user logged-in', token });
     }
 }
 

@@ -18,7 +18,6 @@ exports.query = async (query, values = []) => {
                 }
             });
         });
-        console.log({ result });
         return result;
     } catch (err) {
         console.log('This err happend on db query', err);
