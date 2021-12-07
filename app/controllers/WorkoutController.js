@@ -43,6 +43,15 @@ class WorkoutController {
     await WorkoutsRepository.delete(id);
     res.json({ message: 'User deleted' });
   }
+
+  async deleteAll(req, res) {
+    const token = req.token;
+    const userId = token.id;
+    console.log({ userId });
+    await WorkoutsRepository.deleteAll(userId);
+
+    res.status(200).json({ message: `All workouts deleted of the user with id ${userId}` })
+  }
 }
 
 module.exports = new WorkoutController;

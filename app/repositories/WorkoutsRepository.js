@@ -53,6 +53,15 @@ class WorkoutsRepository {
 
     await db.query(sql, [id]);
   }
+
+  async deleteAll(userId) {
+    const sql = `
+      DELETE FROM workouts
+      WHERE user_id = ?;
+    `;
+
+    await db.query(sql, [userId]);
+  }
 }
 
 module.exports = new WorkoutsRepository;

@@ -18,6 +18,7 @@ router.post('/workouts', jwtAuth, WorkoutController.store);
 router.get('/workouts', jwtAuth, WorkoutController.showByUserId);
 router.put('/workouts/:id', WorkoutController.update);
 router.delete('/workouts/:id', WorkoutController.delete);
+router.delete('/workouts', jwtAuth, WorkoutController.deleteAll);
 
 
 module.exports = router;
