@@ -3,7 +3,6 @@ const { createToken } = require("../utils/createToken");
 const bcrypt = require('bcrypt');
 
 class AuthController {
-    
     async login(req, res) {
         const { email, password } = req.body;
         console.log({ email, password });
